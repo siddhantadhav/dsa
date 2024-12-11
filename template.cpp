@@ -14,14 +14,10 @@ typedef long long ll;
 typedef long double ld;
 typedef vector<int> vi;
 typedef vector<string> vs;
-typedef pair<int, int> pi;
-typedef pair<int, string> ps;
+typedef pair<int, int> pii;
+typedef pair<int, string> pis;
 
 #define PI 3.14159;
-
-void solve() {
-
-}
 
 int main() {
     #ifndef ONLINE_JUDGE
@@ -33,13 +29,7 @@ int main() {
     cin.tie(0);
     cout.tie(0);
 
-    void solve();
-
-    vi arr(4,0);
-    // int arr[4];
-    arrinput(arr, 4);
-
-    cout << arr[3];
+    
 
     return 0;
 }
