@@ -1,5 +1,4 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -7,13 +6,15 @@ using namespace std;
 #define FORN(n) for (int i=0; i<n; i++)
 #define FOR(start, stop, s) for(int i=start; i<(stop); i+=(s))
 #define arrinput(arr, n) for(int i=0; i<n; i++) cin>>arr[i];
-#define pb push_back
+#define pb push_back    
 
 typedef long l;
 typedef long long ll;
 typedef long double ld;
 typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
 typedef vector<string> vs;
+typedef vector<vector<string>> vvs;
 typedef pair<int, int> pii;
 typedef pair<int, string> pis;
 
