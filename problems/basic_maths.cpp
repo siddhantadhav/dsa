@@ -34,7 +34,33 @@ int count_digits(int n){
     return count;
 }
 
+// https://leetcode.com/problems/reverse-integer/description/
+int reverse(int x){
+    if(x == INT_MIN) return 0;
 
+    int num = 0;
+    int sign = (x < 0) ? -1 : 1;
+    x = abs(x);
+
+    while(x>0){
+        int digit = x%10;
+        x = x/10;
+        if (num > INT_MAX / 10 || (num == INT_MAX / 10 && digit > INT_MAX % 10)) {
+            return 0; 
+        }
+        if (num < INT_MIN / 10 || (num == INT_MIN / 10 && digit < INT_MIN % 10)) {
+            return 0;
+        }
+        num = num*10+digit;
+    }
+    
+    return num * sign;
+}
+
+// https://leetcode.com/problems/palindrome-number/
+void isPalindrome(int x){
+    
+}
 
 int main() {
     #ifndef ONLINE_JUDGE
@@ -50,7 +76,8 @@ int main() {
     int n;
     cin >> n;
 
-    cout << count_digits(n) << endl;
+    // cout << count_digits(n) << endl;
+    cout << reverse(n) << "\n";
 
     return 0;
 }
