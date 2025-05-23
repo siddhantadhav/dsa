@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+
+# io
+input.txt
+output.txt
+.DS_Store
