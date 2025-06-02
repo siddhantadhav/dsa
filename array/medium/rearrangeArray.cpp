@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// brute force
 vector<int> rearrangeArray(vector<int> &nums){
 	int n = nums.size();
 	vector<int> pos;
@@ -27,6 +28,26 @@ vector<int> rearrangeArray(vector<int> &nums){
 		i++;
 	}
 	return nums;
+}
+
+// optimal
+vector<int> rearrangeArray(vector<int> &nums){
+	int n = nums.size();
+	vector<int> ans(n, 0);
+	int p = 0;
+	int n = 1;
+
+	for(int i=0; i<n; i++){
+		if(nums[i] > 0){
+			ans[p] = nums[i];
+			p+=2;
+		} else {
+			ans[n] = nums[i];
+			n+=2;
+		}
+	}
+
+	return ans;
 }
 
 int main() {
