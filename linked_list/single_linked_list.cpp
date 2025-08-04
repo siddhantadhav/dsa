@@ -94,22 +94,22 @@ int main() {
 		freopen("output.txt", "w", stdout);
 	#endif
 
-	Node* head = NULL;
+	// Node* head = NULL;
+	//
+	// int n;
+	// cin >> n;
+	//
+	// while (n--) {
+	// 	int t;
+	// 	cin >> t;
+	// 	insert(head, t); 
+	// }
 
-	int n;
-	cin >> n;
-
-	while (n--) {
-		int t;
-		cin >> t;
-		insert(head, t); 
-	}
-
-	print(head);  
-	remove(head, 1);
-	print(head);
-	update(head, 4, 7);
-	print(head);
+	// print(head);  
+	// remove(head, 1);
+	// print(head);
+	// update(head, 4, 7);
+	// print(head);
 
 	return 0;
 }
