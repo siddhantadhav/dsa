@@ -3,13 +3,15 @@
 using namespace std;
 
 int main() {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-  
-	#ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-		freopen("output.txt", "w", stdout);
-	#endif
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-	return 0;
+#ifndef ONLINE_JUDGE
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+#else
+// online submission
+#endif
+
+  return 0;
 }
