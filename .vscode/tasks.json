@@ -1,0 +1,65 @@
+{
+  "tasks": [
+    {
+      "label": "C++: Run active file",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "tmp=$(mktemp /tmp/cpp-run-XXXXXX) && /usr/local/bin/g++-16 -std=c++23 -g -fdiagnostics-color=always \"${file}\" -o \"$tmp\" && \"$tmp\" < \"${workspaceFolder}/input.txt\" > \"${workspaceFolder}/output.txt\"; status=$?; rm -f \"$tmp\"; exit $status"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "shared",
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "detail": "Run active C++ file with input.txt and output.txt."
+    },
+    {
+      "label": "C++: Build active file",
+      "type": "shell",
+      "command": "/usr/local/bin/g++-16",
+      "args": [
+        "-std=c++23",
+        "-g",
+        "-fdiagnostics-color=always",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "silent",
+        "revealProblems": "onProblem",
+        "focus": false,
+        "panel": "shared",
+        "clear": true,
+        "showReuseMessage": false
+      },
+      "detail": "Build active C++ file in its directory."
+    }
+  ],
+  "version": "2.0.0"
+}
